@@ -27,7 +27,7 @@ pipeline {
     stage('Tag Docker Image') {
       agent { label 'controller' }
       steps {
-        # latest 태그 추가 생성
+        // latest 태그 추가 생성
         sh 'docker image tag andrewyss/tomcat-web:$BUILD_NUMBER andrewyss/tomcat-web:latest'
       }
     }
